@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const apiUrl = "http://localhost:5221/items"
-axios.defaults.baseURL= "http://localhost:5221/items"
+const apiUrl = process.env.apiRoute
+axios.defaults.baseURL= process.env.apiRoute
 axios.interceptors.response.use(function (response) {
   console.log("succesfuly")
   // Any status code that lie within the range of 2xx cause this function to trigger
