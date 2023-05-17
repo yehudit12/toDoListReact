@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiUrl = process.env.apiRoute
-axios.defaults.baseURL= process.env.apiRoute
+axios.defaults.baseURL= apiUrl
 axios.interceptors.response.use(function (response) {
   console.log("succesfuly")
   // Any status code that lie within the range of 2xx cause this function to trigger
@@ -18,6 +18,7 @@ export default {
   getTasks: async () => {
     // const result = await axios.get(`${apiUrl}`)    
     // return result.data;
+    console.log('gggggggg')
     const result = await axios.get()    
     return result.data;
   },
