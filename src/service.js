@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = process.env.apiRoute
+const apiUrl = process.env.RENDER_URL
 axios.defaults.baseURL= apiUrl
 axios.interceptors.response.use(function (response) {
   console.log("succesfuly")
